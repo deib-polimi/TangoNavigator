@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NewMapController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\NewMapController.cs" Line="1101" Column="4" />
+      <File FileName="Assets\Scripts\MenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\IndoorNamespace.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MeshCreator.cs" Line="113" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

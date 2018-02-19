@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{774A3C8F-D5DC-EBE2-3C45-4D1268E097CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_3;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\CustomDialogTest.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\DemoSwitcher.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\DynamicTest.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\PluginTest.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\PluginTest2.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\SpeechRecognizerTest.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\SpeechRecognizerTest2.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\TextToSpeechTest.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\TextToSpeechTest2.cs" />
+     <Compile Include="Assets\FantomPlugin\Demo\Scripts\VolumeUI.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Camera\SmoothFollow3.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Graphics\AndroidColor.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Graphics\ProgressImageFill.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Graphics\XColor.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Input\LongClickEventTrigger.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Input\LongClickInput.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Input\PinchInput.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Input\PinchToDistance.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Input\PinchToScale.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Input\SwipeInput.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\AndroidPlugin.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\AndroidPluginRelease.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\AlphaNumericTextDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\CustomDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\DatePickerController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\DialogItemParameter.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\MultiChoiceDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\MultiLineTextDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\NumericTextDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\OKDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\OKWithCheckBoxDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\PasswordTextDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\SavedCheckedBehaviour.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\SavedCheckedSwitcher.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\SelectDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\SingleChoiceDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\SingleLineTextDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\SliderDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\SpeechRecognizerDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\SwitchDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\TimePickerController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\ToastController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\VolumeSliderDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\YesNoDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Dialogs\YesNoWithCheckBoxDialogController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Functions\AndroidActionController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Functions\HardVolumeController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Functions\HardVolumeControllerWithToast.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Functions\NotificationController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Functions\SpeechRecognizerController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Functions\TextToSpeechController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Module\Functions\WebSearchController.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\System\AppExitWithKey.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\System\AppExitWithToast.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\System\LocalizeString.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\System\Param.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\System\SceneLoadWithKey.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\System\SingletonBehaviour.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\System\XDebug.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\System\XPlayerPrefs.cs" />
+     <Compile Include="Assets\FantomPlugin\FantomLib\Scripts\Tool\ObjectArrangeTool.cs" />
+     <Compile Include="Assets\Google-Unity\Scripts\AndroidHelper.cs" />
+     <Compile Include="Assets\Google-Unity\Scripts\AndroidLifecycle.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+     <Compile Include="Assets\Scripts\Camera\TouchCamera.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Exporter.cs" />
+     <Compile Include="Assets\Scripts\IndoorNamespace.cs" />
+     <Compile Include="Assets\Scripts\MainMenuStart.cs" />
+     <Compile Include="Assets\Scripts\MenuController.cs" />
+     <Compile Include="Assets\Scripts\MeshCreator.cs" />
+     <Compile Include="Assets\Scripts\MeshSerializer.cs" />
+     <Compile Include="Assets\Scripts\NewMapController.cs" />
+     <Compile Include="Assets\TangoPrefabs\Deprecated\TangoARPoseController.cs" />
+     <Compile Include="Assets\TangoPrefabs\Deprecated\TangoDeltaPoseController.cs" />
+     <Compile Include="Assets\TangoPrefabs\Scripts\ARCameraPostProcess.cs" />
+     <Compile Include="Assets\TangoPrefabs\Scripts\TangoARScreen.cs" />
+     <Compile Include="Assets\TangoPrefabs\Scripts\TangoEnvironmentalLighting.cs" />
+     <Compile Include="Assets\TangoPrefabs\Scripts\TangoGestureCamera.cs" />
+     <Compile Include="Assets\TangoPrefabs\Scripts\TangoMultiCamera.cs" />
+     <Compile Include="Assets\TangoPrefabs\Scripts\TangoPointCloud.cs" />
+     <Compile Include="Assets\TangoPrefabs\Scripts\TangoPointCloudFloor.cs" />
+     <Compile Include="Assets\TangoPrefabs\Scripts\TangoPoseController.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\Common.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\DMatrix4x4.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\DVector3.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\DVector4.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\MarshallingHelper.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\OrientationManager.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\PublicForTesting.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\TangoAndroidHelper.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\TangoEnums.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\TangoExtensions.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Common\TangoTypes.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\IExperimentalTangoVideoOverlay.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITango3DReconstruction.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoAreaDescriptionEvent.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoCameraTexture.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoDepth.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoDepthMultithreaded.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoEvent.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoEventMultithreaded.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoLifecycle.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoPointCloud.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoPointCloudMultithreaded.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoPose.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoVideoOverlay.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Interfaces\ITangoVideoOverlayMultithreaded.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Listeners\AreaDescriptionEventListener.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Listeners\DepthListener.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Listeners\PoseListener.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Listeners\TangoEventListener.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\Listeners\VideoOverlayListener.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\AreaDescription.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\DepthProvider.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\EmulationHelpers\EmulatedAreaDescriptionHelper.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\EmulationHelpers\EmulatedEnvironmentRenderHelper.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\ITangoApplication.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\PoseProvider.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\Tango3DReconstruction.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\TangoApplication.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\TangoConfig.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\TangoEventProvider.cs" />
+     <Compile Include="Assets\TangoSDK\Core\Scripts\TangoWrappers\VideoOverlayProvider.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AreaDescriptionManagement\Scripts\ADMGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AreaDescriptionManagement\Scripts\ADMLockY.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AreaDescriptionManagement\Scripts\ADMQualityCamera.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AreaDescriptionManagement\Scripts\ADMQualityManager.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AreaLearning\Scripts\AreaDescriptionPicker.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AreaLearning\Scripts\AreaLearningInGameController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AreaLearning\Scripts\RelocalizingOverlay.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AugmentedReality\Scripts\ARGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AugmentedReality\Scripts\ARMarker.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\AugmentedReality\Scripts\ARTouchEffect.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\Common\Scripts\AreaDescriptionListElement.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\Common\Scripts\FPSCounter.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\Common\Scripts\SceneSwitcher.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\Common\Scripts\TangoDynamicMesh.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\DetectTangoCore\Scripts\DetectTangoCoreGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\DetectTangoCore\Scripts\TangoPresentController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\ExperimentalFloorFinding\Scripts\TangoFloorFindingUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\ExperimentalMeshBuilderWithColor\Scripts\MeshBuilderWithColorGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\ExperimentalMeshBuilderWithPhysics\Scripts\BallThrower.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\ExperimentalMeshBuilderWithPhysics\Scripts\MeshBuilderWithPhysicsGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\ExperimentalMeshBuilderWithPhysics\Scripts\TopDownFollow.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\ExperimentalMeshOcclusion\Scripts\MeshOcclusionAreaDescriptionListElement.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\ExperimentalMeshOcclusion\Scripts\MeshOcclusionCameraDepthTexture.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\ExperimentalMeshOcclusion\Scripts\MeshOcclusionUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\MarkerDetection\Scripts\MarkerDetectionUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\MarkerDetection\Scripts\MarkerVisualizationObject.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\MotionTracking\Scripts\MotionTrackingGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\MotionTracking\Scripts\MotionTrackingRotate.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\PointCloud\Scripts\PointCloudFPSCounter.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\PointCloud\Scripts\PointCloudGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\PointToPoint\Scripts\PointToPointGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\SimpleAugmentedReality\Scripts\SimpleARGUIController.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\SimpleAugmentedReality\Scripts\SimpleAROrbit.cs" />
+     <Compile Include="Assets\TangoSDK\Examples\SimpleAugmentedReality\Scripts\SimpleARRotate.cs" />
+     <Compile Include="Assets\TangoSDK\TangoSupport\Scripts\TangoSupport.cs" />
+     <Compile Include="Assets\TangoSDK\TangoUX\Scripts\Common\AndroidHelper.cs" />
+     <Compile Include="Assets\TangoSDK\TangoUX\Scripts\Common\TangoUxEnums.cs" />
+     <Compile Include="Assets\TangoSDK\TangoUX\Scripts\Common\TangoUxTypes.cs" />
+     <Compile Include="Assets\TangoSDK\TangoUX\Scripts\Interfaces\ITangoUX.cs" />
+     <Compile Include="Assets\TangoSDK\TangoUX\Scripts\Interfaces\ITangoUXMultithreaded.cs" />
+     <Compile Include="Assets\TangoSDK\TangoUX\Scripts\Listeners\UxExceptionEventListener.cs" />
+     <Compile Include="Assets\TangoSDK\TangoUX\Scripts\TangoUx.cs" />
+     <Compile Include="Assets\TriangleDotNet\TestScripts\DelaunayDemo.cs" />
+     <Compile Include="Assets\TriangleDotNet\TestScripts\InputGeometryExtensions.cs" />
+     <Compile Include="Assets\TriangleDotNet\TestScripts\LightMover.cs" />
+     <Compile Include="Assets\TriangleDotNet\TestScripts\ReloadScene.cs" />
+     <Compile Include="Assets\TriangleDotNet\TestScripts\UPolygon.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Algorithm\Dwyer.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Algorithm\ITriangulator.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Algorithm\Incremental.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Algorithm\SweepLine.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\BadTriQueue.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Behavior.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Carver.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Data\BadSubseg.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Data\BadTriangle.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Data\Osub.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Data\Otri.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Data\Segment.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Data\Triangle.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Data\Vertex.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Enums.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Geometry\BoundingBox.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Geometry\Edge.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Geometry\EdgeEnumerator.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Geometry\ISegment.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Geometry\ITriangle.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Geometry\InputGeometry.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Geometry\Point.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Geometry\RegionPointer.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\IO\DataReader.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\IO\DebugWriter.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\IO\FileReader.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\IO\FileWriter.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\IO\IGeometryFormat.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\IO\IMeshFormat.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\IO\InputTriangle.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\IO\TriangleFormat.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Log\ILog.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Log\ILogItem.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Log\SimpleLog.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Log\SimpleLogItem.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Mesh.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\NewLocation.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Primitives.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Properties\AssemblyInfo.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Quality.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Sampler.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Smoothing\ISmoother.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Smoothing\SimpleSmoother.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\AdjacencyMatrix.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\BoundedVoronoi.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\CuthillMcKee.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\IVoronoi.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\QuadTree.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\QualityMeasure.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\RegionIterator.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\Statistic.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\Voronoi.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\Tools\VoronoiRegion.cs" />
+     <Compile Include="Assets\TriangleDotNet\Triangle\TriangleLocator.cs" />
+     <None Include="Assets\Editor\temp\cd5352bf-0294-2774-8225-8e301f66a0e1Marker.xml" />
+     <None Include="Assets\TangoSDK\Examples\ExperimentalMeshOcclusion\Shaders\ZTestBlur.shader" />
+     <None Include="Assets\TangoPrefabs\Shaders\TangoEnvironmentalLighting\EnvironmentalLightingStandard.shader" />
+     <None Include="Assets\Plugins\Android\AndroidManifest-FullPlugin_Portrait.xml" />
+     <None Include="Assets\TangoSDK\Examples\SimpleAugmentedReality\Textures\README.txt" />
+     <None Include="Assets\TangoPrefabs\Shaders\PointCloud.shader" />
+     <None Include="Assets\TangoSDK\Core\Shaders\RGB_ARScreen.shader" />
+     <None Include="Assets\TangoPrefabs\Shaders\YUV2RGB.shader" />
+     <None Include="Assets\TangoSDK\Core\Shaders\RGB2YUV_CbCr.shader" />
+     <None Include="Assets\FantomPlugin\fantomPlugin_ReadMe_en.txt" />
+     <None Include="Assets\TangoPrefabs\Shaders\ARPostProcess.shader" />
+     <None Include="Assets\TangoSDK\Examples\ExperimentalMeshBuilderWithPhysics\Shader\UnlitColor.shader" />
+     <None Include="Assets\TangoPrefabs\Shaders\TangoEnvironmentalLighting\EnvironmentalLightingSpecularBumped.shader" />
+     <None Include="Assets\TangoPrefabs\Shaders\TangoEnvironmentalLighting\TangoEnvironmentalLighting.cginc" />
+     <None Include="Assets\TangoSDK\Core\Shaders\DepthEmulation.shader" />
+     <None Include="Assets\TangoSDK\Core\Shaders\RGB2YUV_Y.shader" />
+     <None Include="Assets\Plugins\Android\AndroidManifest-FullPlugin_Landscape.xml" />
+     <None Include="Assets\TangoSDK\Examples\ExperimentalMeshOcclusion\Shaders\OcclusionMesh.shader" />
+     <None Include="Assets\FantomPlugin\fantomPlugin_ReadMe_jp.txt" />
+     <None Include="Assets\TangoSDK\Examples\ExperimentalMeshBuilderWithColor\Shaders\UnlitVertexColor.shader" />
+     <None Include="Assets\Plugins\Android\AndroidManifest-demo.xml" />
+     <None Include="Assets\TangoSDK\Examples\ExperimentalMeshOcclusion\Shaders\OcclusionMask.shader" />
+     <None Include="Assets\TangoSDK\Core\Shaders\ColorCameraEmulation.shader" />
+     <None Include="Assets\TangoPrefabs\Shaders\PointCloud_Occlusion.shader" />
+     <None Include="Assets\TangoSDK\Examples\ExperimentalMeshOcclusion\Shaders\TangoOcclusion.cginc" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Editor\temp\cd5352bf-0294-2774-8225-8e301f66a0e1Wall.xml" />
+     <None Include="Assets\FantomPlugin\Demo\Sounds\fantom_Music_SE_ReadMe.txt" />
+     <None Include="Assets\TangoPrefabs\Shaders\TangoEnvironmentalLighting\EnvironmentalLightingDiffuse.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
