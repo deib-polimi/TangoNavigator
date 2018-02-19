@@ -1068,7 +1068,6 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 			List<string> places = new List<string> ();
 			foreach (Corner c in doors) {
 				places.Add (c.point.name);
-				Debug.Log (c.point.name);
 			}
 			places.Sort ();
 			// Show the destinations in a list.
@@ -1093,15 +1092,15 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 			Vector3 startingPoint = m_poseController.transform.position;
 
 			// The destination point isn't on the NavMesh, therefore we find the closest point to it on the mesh
-			Debug.Log (NavMesh.FindClosestEdge (startingPoint, out hit, NavMesh.AllAreas));
+			Debug.Log (NavMesh.SamplePosition (startingPoint, out hit, 2f, NavMesh.AllAreas));
 
 			Vector3 destPoint = doors[currentDestIndex].point.transform.position;
-			Debug.Log (NavMesh.FindClosestEdge (destPoint, out hit2, NavMesh.AllAreas));
+			Debug.Log (NavMesh.SamplePosition (destPoint, out hit2, 2f, NavMesh.AllAreas));
 			Debug.Log (NavMesh.CalculatePath (hit.position, hit2.position, NavMesh.AllAreas, path));
 
 			GameObject g = DrawLine (path.corners [0], path.corners [1], 9);
 			LineRenderer lr = g.GetComponent<LineRenderer> ();
-			Array newPath = Array.CreateInstance (typeof(Vector3), path.corners.Length + 1);
+			Vector3[] newPath = new Vector3[path.corners.Length + 1];
 			path.corners.CopyTo (newPath, 0);
 			newPath [newPath.Length - 1] = destPoint;
 			lr.positionCount = newPath.Length;

@@ -109,9 +109,8 @@ public class MeshCreator
 //
 //		File.WriteAllBytes(Application.persistentDataPath + "/" + adfname + "Mesh", MeshSerializer.WriteMesh (mesh, true));
 
-		meshContainer.GetComponent<NavMeshSurface> ().BuildNavMesh ();
-
 		meshContainer.SetActive (true);
+		meshContainer.GetComponent<NavMeshSurface> ().BuildNavMesh ();
 
 		Debug.Log ("NavMesh created");
 
