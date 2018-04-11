@@ -19,7 +19,7 @@ public class MeshCreator
 
 	public static void CreateMesh (GameObject meshContainer, string path, string path2, string adfname)
 	{
-		var subgraphs = _LoadMarkerFromDisk (path, path2);
+		var subgraphs = _LoadMarkerToSubgraph (path, path2);
 		meshContainer.name = adfname + "Mesh";
 
 		InputGeometry geometry = new InputGeometry ();
@@ -104,8 +104,8 @@ public class MeshCreator
 		//GetComponent<MeshFilter>().mesh = mesh;
 		mf.mesh = mesh;
 
-//		Exporter e = meshContainer.GetComponent<Exporter> () as Exporter;
-//		e.DoExport (true);
+		Exporter e = meshContainer.GetComponent<Exporter> () as Exporter;
+		e.DoExport (true);
 //
 //		File.WriteAllBytes(Application.persistentDataPath + "/" + adfname + "Mesh", MeshSerializer.WriteMesh (mesh, true));
 
@@ -119,7 +119,7 @@ public class MeshCreator
 		//ObjExporterScript.MeshToString(GetComponent<MeshFilter>(),
 	}
 
-	private static IEnumerable<Graph<Node>> _LoadMarkerFromDisk (string p1, string p2)
+	private static IEnumerable<Graph<Node>> _LoadMarkerToSubgraph (string p1, string p2)
 	{
 		// Attempt to load the exsiting markers from storage.
 		string path = p1;
@@ -285,36 +285,5 @@ public class MeshCreator
 		{
 			return string.Format ("Edge between node {0} and {1}", node1, node2);
 		}
-	}
-
-	[System.Serializable]
-	public class MarkerData
-	{
-		/// <summary>
-		/// Marker's type.
-		/// 
-		/// Red, green or blue markers. In a real game scenario, this could be different game objects
-		/// (e.g. banana, apple, watermelon, persimmons).
-		/// </summary>
-		[XmlElement ("type")]
-		public int m_type;
-
-		/// <summary>
-		/// Position of this mark, with respect to the origin of the game world.
-		/// </summary>
-		[XmlElement ("position")]
-		public Vector3 m_position;
-
-		/// <summary>
-		/// Rotation of this mark.
-		/// </summary>
-		[XmlElement ("orientation")]
-		public Quaternion m_orientation;
-
-		/// <summary>
-		/// ID of this mark.
-		/// </summary>
-		[XmlElement ("id")]
-		public int m_id;
 	}
 }

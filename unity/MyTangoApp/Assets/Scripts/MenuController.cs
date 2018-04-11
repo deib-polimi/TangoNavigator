@@ -70,7 +70,9 @@ public class MenuController : MonoBehaviour, ITangoLifecycle
 	/// 
 	/// The panel will be enabled when the game starts.
 	/// </summary>
-	public GameObject m_gameControlPanel;
+	public GameObject m_editControlPanel;
+
+	public GameObject m_NavigateControlPanel;
 
 	/// <summary>
 	/// The GUI controller.
@@ -134,7 +136,11 @@ public class MenuController : MonoBehaviour, ITangoLifecycle
 		// Enable GUI controller to allow user tap and interactive with the environment.
 		m_poseController.gameObject.SetActive(true);
 		m_guiController.enabled = true;
-		m_gameControlPanel.SetActive(true);
+		if (m_guiController.navigateBool) {
+			m_NavigateControlPanel.SetActive (true);
+		} else {
+			m_editControlPanel.SetActive (true);
+		}
 	}
 
 	/// <summary>

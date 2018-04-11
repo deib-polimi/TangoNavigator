@@ -64,9 +64,9 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 	public UnityEngine.UI.Text m_savingText;
 
 	/// <summary>
-	/// New map boolean.
+	/// Navigate boolean.
 	/// </summary>
-	public bool m_newMap;
+	public bool navigateBool;
 
 	/// <summary>
 	/// Helper for the single choice list of the destinations.
@@ -77,6 +77,10 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 	/// Mesh used for the navigation.
 	/// </summary>
 	public GameObject mesh;
+
+	public GameObject navPanel;
+
+	public GameObject editPanel;
 
 	/// <summary>
 	/// Previous point touched. Used in order to keep track of the last touched element.
@@ -252,6 +256,10 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 		}
 
 		if (EventSystem.current.IsPointerOverGameObject (0) || GUIUtility.hotControl != 0) {
+			return;
+		}
+
+		if (navigateBool) {
 			return;
 		}
 
@@ -689,6 +697,18 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 
 		}
 
+		if (navigateBool) {
+			float avgY = 0;
+			foreach (Corner c in corners) {
+				avgY += c.point.transform.position.y;
+			}
+			avgY = avgY / corners.Count;
+			floor = new Floor (new Plane (), new Vector3 ());
+			floor.floorCenter = new Vector3 (0, avgY, 0);
+			m_pointCloud.m_floorFound = true;
+			DrawCorridors ();
+		}
+
 	}
 
 	/// <summary>
@@ -917,9 +937,9 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 		}
 	}
 
-	public void setNewMapBool (bool b)
+	public void setNavigateBool (bool b)
 	{
-		m_newMap = b;
+		navigateBool = b;
 		return;
 	}
 
@@ -1051,6 +1071,12 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 	{
 		// If the mesh hasn't been created yet then do it.
 		if (!mesh.activeSelf) {
+
+			if (!m_pointCloud.m_floorFound) {
+				AndroidHelper.ShowAndroidToastMessage ("Please, select first the floor");
+				yield break;
+			}
+
 			Debug.Log ("Creating mesh...");
 			// Put the mesh at the floor level
 			mesh.transform.Translate (Vector3.down * (mesh.transform.position.y - floor.floorCenter.y));
@@ -1061,6 +1087,8 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 			foreach (GameObject g in gs) {
 				g.SetActive (false);
 			}
+			navPanel.SetActive (true);
+			editPanel.SetActive (false);
 		} // The mesh has been already created, then navigate.
 		else {
 			Debug.Log ("Showing mesh...");
@@ -1092,10 +1120,10 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 			Vector3 startingPoint = m_poseController.transform.position;
 
 			// The destination point isn't on the NavMesh, therefore we find the closest point to it on the mesh
-			Debug.Log (NavMesh.SamplePosition (startingPoint, out hit, 2f, NavMesh.AllAreas));
+			Debug.Log (NavMesh.SamplePosition (startingPoint, out hit, 5f, NavMesh.AllAreas));
 
 			Vector3 destPoint = doors[currentDestIndex].point.transform.position;
-			Debug.Log (NavMesh.SamplePosition (destPoint, out hit2, 2f, NavMesh.AllAreas));
+			Debug.Log (NavMesh.SamplePosition (destPoint, out hit2, 5f, NavMesh.AllAreas));
 			Debug.Log (NavMesh.CalculatePath (hit.position, hit2.position, NavMesh.AllAreas, path));
 
 			GameObject g = DrawLine (path.corners [0], path.corners [1], 9);
@@ -1105,7 +1133,9 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 			newPath [newPath.Length - 1] = destPoint;
 			lr.positionCount = newPath.Length;
 			lr.SetPositions (newPath);
-			lr.material.color = Color.blue;
+			lr.startColor = new Color32 (252, 70, 107, 1);
+			lr.endColor = new Color32 (63, 94, 251, 1);
+			//lr.material.color = Color.blue;
 			lr.widthMultiplier = 10f;
 			lr.tag = "Path";
 
@@ -1113,47 +1143,5 @@ public class NewMapController : MonoBehaviour, ITangoPose, ITangoEvent, ITangoDe
 		}
 		yield break;
 
-	}
-
-	/// <summary>
-	/// Data container for marker.
-	/// 
-	/// Used for serializing/deserializing marker to xml.
-	/// </summary>
-	[System.Serializable]
-	public class MarkerData
-	{
-		/// <summary>
-		/// Marker's type.
-		/// 
-		/// Red, green or blue markers. In a real game scenario, this could be different game objects
-		/// (e.g. banana, apple, watermelon, persimmons).
-		/// </summary>
-		[XmlElement ("type")]
-		public int m_type;
-
-		/// <summary>
-		/// Position of this mark, with respect to the origin of the game world.
-		/// </summary>
-		[XmlElement ("position")]
-		public Vector3 m_position;
-
-		/// <summary>
-		/// Rotation of this mark.
-		/// </summary>
-		[XmlElement ("orientation")]
-		public Quaternion m_orientation;
-
-		/// <summary>
-		/// ID of this mark.
-		/// </summary>
-		[XmlElement ("id")]
-		public int m_id;
-
-		/// <summary>
-		/// Name of this mark.
-		/// </summary>
-		[XmlElement ("name")]
-		public string m_name;
 	}
 }

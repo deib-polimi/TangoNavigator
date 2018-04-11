@@ -11,7 +11,7 @@ public class MainMenuStart : MonoBehaviour {
 //		#if UNITY_EDITOR
 //		EditorSceneManager.LoadScene ("MainScene");
 //		#else
-		SceneManager.LoadScene ("MainScene");
+		SceneManager.LoadScene ("MainScene2");
 //		#endif
 	}
 
